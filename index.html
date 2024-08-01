@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE-edge">
+    <meta name="viewport" content="width=device-width", initial-scale="1.0">
+    <title>AZoom Car Rental Website</title>
+    <!-- Link to CSS -->
+    <link rel="stylesheet" href="style.css">
+    <!-- Box Icons -->
+    <link rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <a href="#" class="logo"><img src="img/logo.png"></a>
+
+        <div class="bx bx-menu" id="menu-icon"></div>
+
+        <ul class="navbar">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#cars">Cars</a></li>
+            <li><a href="#locate">Locate</a></li>
+
+        <div class="header-btn">
+            <a href="login.html" class ="Login">Login</a>
+        
+        </ul>
+            
+        </div>
+    </header>
+    <!--  Home page -->
+    <section class="home" id="home">
+        <div class="text">
+            <h1><span>Experience</span> the <br>future of Transportation</h1>
+            <br><h3>Elevate Your Travel Experience</h3></br>
+        </div>
+
+        <div class="form-container">
+            <form id="bookingForm">
+                <div class="input-box">
+                    <span>Location</span>
+                    <select id="location" required>
+                        <option value="" disabled selected>Select a location</option>
+                        <option value="25 Ubi Rd 4">25 Ubi Rd 4</option>
+                        <option value="27 Ubi Rd 4">27 Ubi Rd 4</option>
+                    </select>
+                </div>
+                <div class="input-box">
+                    <span>Pick-Up Date</span>
+                    <input type="date" id="pickUpDate" required>
+                </div>
+                <div class="input-box">
+                    <span>Return Date</span>
+                    <input type="date" id="returnDate" required>
+                </div>
+                <input type="submit" class="btn">
+            </form>
+    </section>
+    <!-- About page-->
+    <section class="about" id="about">
+        <div class="heading">
+            <h1>About Us</h1>
+        </div>
+        <div class="about-container">
+            <div class="about-img">
+                <img src="img/about_mazda.png" alt="About Mazda">
+            </div>
+            <div class="about-text">
+                <p>Welcome to AZoom Car Rental !</p>
+                <p>We offer a premium selection of electric vehicles tailored to enhance your driving experience.</p>
+                <p>Our commitment to eco-friendly transportation and customer satisfaction sets us apart.</p>
+                <p>Discover the future of driving with AZoom Car Rental, where innovation meets convenience.</p>
+                <a href="#locate" class="btn">Learn More</a>
+            </div>
+        </div>
+    </section>
+    <!-- Cars page -->
+    <section class="cars" id="cars">
+        <div class="heading">
+            <h1>Our Cars</h1>
+        </div>
+        <div class="cars-container">
+            <div class="box">
+                <div class="box-img">
+                    <img src="img/cars_tesla.png" alt="Tesla">
+                </div>
+                <p>Tesla</p>
+                <h3>Tesla Model S</h3>
+                <h2>$250 <span>/day</span></h2>
+                <a href="final-payment.html" class="btn" onclick="setCarDetails('Tesla Model S', 250)">Rent Now</a>
+            </div>
+
+            <div class="box">
+                <div class="box-img">
+                    <img src="img/cars_chevrolet.jpg" alt="Chevrolet">
+                </div>
+                <p>Chevrolet</p>
+                <h3>Chevrolet Menlo</h3>
+                <h2>$150 <span>/day</span></h2>
+                <a href="final-payment.html" class="btn" onclick="setCarDetails('Chevrolet Menlo', 150)">Rent Now</a>
+            </div>
+
+            <div class="box">
+                <div class="box-img">
+                    <img src="img/cars_nissan.jpg" alt="Nissan">
+                </div>
+                <p>Nissan</p>
+                <h3>Nissan Ariya Nismo</h3>
+                <h2>$145 <span>/day</span></h2>
+                <a href="final-payment.html" class="btn" onclick="setCarDetails('Nissan Ariya Nismo', 145)">Rent Now</a>
+            </div>
+
+            <div class="box">
+                <div class="box-img">
+                    <img src="img/cars_byd.jpg" alt="BYD">
+                </div>
+                <p>BYD</p>
+                <h3>BYD Seal</h3>
+                <h2>$155 <span>/day</span></h2>
+                <a href="final-payment.html" class="btn" onclick="setCarDetails('BYD Seal', 155)">Rent Now</a>
+            </div>
+
+            <div class="box">
+                <div class="box-img">
+                    <img src="img/cars_bmw.jpg" alt="BMW">
+                </div>
+                <p>BMW</p>
+                <h3>BMW i5</h3>
+                <h2>$185 <span>/day</span></h2>
+                <a href="final-payment.html" class="btn" onclick="setCarDetails('BMW i5', 185)">Rent Now</a>
+            </div>
+
+            <div class="box">
+                <div class="box-img">
+                    <img src="img/cars_hyundai.jpg" alt="Hyundai">
+                </div>
+                <p>Hyundai</p>
+                <h3>Hyundai Ioniq 5</h3>
+                <h2>$165 <span>/day</span></h2>
+                <a href="final-payment.html" class="btn" onclick="setCarDetails('Hyundai Ioniq 5', 165)">Rent Now</a>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Locate page -->
+    <section class="locate" id="locate">
+        <div class="heading">
+            <h1>Pick Up Your Car Here</h1>
+        </div>
+        <div class="locate-content">
+            <div class="map-link">
+                <a href="https://maps.app.goo.gl/8EcQPiuC8Kuho3G18" target="_blank" rel="noopener noreferrer" aria-label="View pick-up location on Google Maps">
+                    <img src="img/locate_pickup.png" alt="Pick-up location on Google Maps">
+                </a>
+            </div>
+            <div class="locate-text">
+                <p>Follow these steps to pick up your car:</p>
+                <ol>
+                    <li><strong>Arrival:</strong> Visit our AZoom Car Rental office located at the address provided on the map.</li>
+                    <li><strong>Check-In:</strong> Proceed to the check-in counter where our staff will assist you.</li>
+                    <li><strong>Documentation:</strong> Present your booking confirmation and a valid driver’s license.</li>
+                    <li><strong>Vehicle Inspection:</strong> Review and inspect the vehicle with our staff to ensure everything is in order.</li>
+                    <li><strong>Key Handover:</strong> Receive the keys and any additional instructions regarding your rental.</li>
+                    <li><strong>Departure:</strong> Enjoy your journey and drive safely!</li>
+                </ol>
+                <p>If you have any questions or need assistance, feel free to contact us.</p>
+                <p><strong>Email:</strong> AZoomCarRental@gmail.com</p>
+                <p><strong>Phone:</strong> +65 6345 8888</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Return page -->
+    <section class="return" id="return">
+        <div class="heading">
+            <h1>Return Your Car Here</h1>
+        </div>
+        <div class="return-content">
+            <div class="return-link">
+                <a href="https://maps.app.goo.gl/u8SHb6bXtvQivd5k6" target="_blank" rel="noopener noreferrer" aria-label="View return location on Google Maps">
+                    <img src="img/locate_return.png" alt="Return location on Google Maps">
+                </a>
+            </div>
+            <div class="return-text">
+                <p>Follow these steps to return your car:</p>
+                <ol>
+                    <li><strong>Arrival at Carpark:</strong> Drive to the designated carpark location, which is marked on the map.</li>
+                    <li><strong>Park the Vehicle:</strong> Park the car in one of the designated return spaces. Make sure the vehicle is clean and all personal belongings are removed.</li>
+                    <li><strong>Return the Keys:</strong> Drop off the keys at the designated key drop-off point or hand them to our staff if they are present.</li>
+                    <li><strong>Vehicle Check:</strong> Our staff will conduct a final inspection of the vehicle if required.</li>
+                    <li><strong>Finalize Return:</strong> Confirm that the return process is complete and address any additional instructions if provided.</li>
+                </ol>
+                <p><strong>Carpark Address:</strong> 302 Ubi Ave 1, Singapore 400302</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <h3> Contact Us</h3>
+                <p>Email: AZoomCarRental@gmail.com</p>
+                <p>Phone: +65 6345 8888</p>
+                <p>Address: 25 Ubi Road 4, Singapore 408621</p>
+                <p>Address: 27 Ubi Road 4, Singapore 408618</p>
+            </div>
+            <div class="footer-content">
+                <h3>Quick Links</h3>
+                <ul class="list">
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#cars">Cars</a></li>
+                    <li><a href="#locate">Locate</a></li>
+                </ul>
+            </div>
+            <div class="footer-content">
+                <h3>Follow Us</h3>
+                <ul class="social-icons">
+                <li><a href=""><i class='bx bxl-facebook-circle'></i></a></li>
+                <li><a href=""><i class='bx bxl-twitter'></i></a></li>
+                <li><a href=""><i class='bx bxl-instagram' ></i></a></li>
+                <li><a href=""><i class='bx bxl-linkedin-square' ></i></a></li>
+                </ul>
+
+            </div>
+        </div>
+        <div class="bottom-bar">
+            <p>&copy; 2024 AZoom Car Rental . All rights reserved</p>
+        </div>
+    </footer>
+
+  
+    <!-- Link to JS -->
+    <script src="main.js"></script>
+
+    <script>
+        function setCarDetails(name, rate) {
+            localStorage.setItem('carName', name);
+            localStorage.setItem('carRate', rate);
+        }
+    </script>
+</body>
+</html>

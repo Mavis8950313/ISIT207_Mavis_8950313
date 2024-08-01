@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AZoom Car Rental Payment</title>
+    <link rel="stylesheet" href="paymentstyle.css">
+</head>
+<body>
+    <div class="container">
+        <form action="payment-successful.html" method="post">
+            <div class="row">
+                <div class="column">
+                    <h3 class="title">Billing Address</h3>
+                    <div class="input-box">
+                        <span>Full Name :</span>
+                        <input type="text" placeholder="Your Name" required>
+                    </div>
+                    <div class="input-box">
+                        <span>Email :</span>
+                        <input type="email" placeholder="someone@gmail.com" required>
+                    </div>
+                    <div class="input-box">
+                        <span>Address :</span>
+                        <input type="text" placeholder="Your Address" required>
+                    </div>
+                    <div class="input-box">
+                        <span>City :</span>
+                        <input type="text" placeholder="Singapore" required>
+                    </div>
+
+                    <div class="flex">
+                        <div class="input-box">
+                            <span>State :</span>
+                            <input type="text" placeholder="Singapore" required>
+                        </div>
+                        <div class="input-box">
+                            <span>Postal Code :</span>
+                            <input type="text" placeholder="123456" required>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="column">
+                    <h3 class="title">Payment</h3>
+                    <div class="input-box">
+                        <span>Cards Accepted :</span>
+                        <img src="img/payment_cards.png" alt="">
+                    </div>
+                    <div class="input-box">
+                        <span>Full Name On Card :</span>
+                        <input type="text" placeholder="Full Name" required>
+                    </div>
+                    <div class="input-box">
+                        <span>Credit Card Number :</span>
+                        <input type="text" placeholder="1234 1234 1234 1234" required>
+                    </div>
+                    <div class="input-box">
+                        <span>Expiry Month :</span>
+                        <input type="text" placeholder="Month" required>
+                    </div>
+
+                    <div class="flex">
+                        <div class="input-box">
+                            <span>Expiry Year :</span>
+                            <input type="text" placeholder="Year" required>
+                        </div>
+                        <div class="input-box">
+                            <span>CVV :</span>
+                            <input type="text" placeholder="123" required>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <button type="submit" class="btn">Submit</button>
+        </form>
+    </div>
+</body>
+</html>

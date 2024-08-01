@@ -1,0 +1,51 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AZoom Car Rental Payment</title>
+    <link rel="stylesheet" href="final-payment.css">
+</head>
+<body>
+    <section class="payment" id="payment">
+        <div class="text">
+            <form action="confirm-payment.html" method="post"></form>
+            <h1>Payment Page</h1>
+            <h3>Calculate Your Total Cost</h3>
+            <p id="carInfo"></p>
+        </div>
+        <div class="form-container">
+            <form id="paymentForm">
+                <div class="input-box">
+                    <span>Pick-Up Location</span>
+                    <select id="pickUpLocation" required>
+                        <option value="" disabled selected>Select Location</option>
+                        <option value="25 Ubi Rd 4">25 Ubi Rd 4</option>
+                        <option value="27 Ubi Rd 4">27 Ubi Rd 4</option>
+                    </select>
+                </div>
+                <div class="input-box">
+                    <span>Pick-Up Date & Time</span>
+                    <input type="datetime-local" id="pickUpDateTime" required>
+                </div>
+                <div class="input-box">
+                    <span>Return Date & Time</span>
+                    <input type="datetime-local" id="returnDateTime" required>
+                </div>
+                <div class="input-box">
+                    <span>Cost per Day</span>
+                    <input type="text" id="costPerDay" readonly>
+                </div>
+                <div class="input-box">
+                    <span>Total Cost</span>
+                    <input type="text" id="totalCost" readonly>
+                </div>
+                <input type="submit" class="btn" value="Calculate">
+                <button type="submit" id="payNowBtn" class="btn">Pay Now</button>
+            </form>
+        </div>
+    </section>
+
+    <script src="final-payment.js"></script>
+    
+</body>
+</html>
